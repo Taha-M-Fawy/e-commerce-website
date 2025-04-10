@@ -1,0 +1,142 @@
+* {
+    font-family: "Inter", sans-serif;
+}
+
+.aboutus {
+    margin: 50px 0;
+  }
+  .containers {
+    margin: 0 35px;
+    padding: 0 10px;
+  }
+  .landing {
+    padding: 0 0 60px;
+  }
+  .aboutus .head {
+    color: var(--text1);
+    margin-bottom: 40px;
+  }
+  .aboutus .head a {
+    text-decoration: none;
+    color: var(--text1);
+  }
+  .aboutus .head a:hover,
+  .aboutus .head a:focus,
+  .aboutus .head .actives {
+    color: black;
+  }
+
+  .contact-box {
+    font-family: 'Arial', sans-serif;
+    width: 340px;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, .1);
+
+}
+
+.contact-container {
+    margin: 60px auto;
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+
+    border-bottom: 1px solid #cccccc;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+.contact-card:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.contact-card i {
+    background-color: #db4444;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.icon_text {
+    margin: 0 0 10px;
+}
+
+/*  */
+
+.contact_form {
+    width: 800px;
+    height: 500px;
+    background: #fff;
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input_raw {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.input_raw input,
+.user_message {
+    background-color: #F5F5F5;
+    border: none;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.input_raw input {
+    padding: 12px;
+    background-color: #F5F5F5;
+    border: none;
+    font-size: 14px;
+    border-radius: 4px;
+    width: calc(33.33% - 10.66px);
+}
+
+.user_message {
+    width: 100%;
+    height: 207px;
+    padding: 16px;
+    background-color: #F5F5F5;
+    border: none;
+    font-size: 14px;
+    border-radius: 4px;
+    resize: none;
+}
+
+
+.user_message_bottom {
+    width: 215px;
+    height: 56px;
+    border-radius: 4px;
+    padding: 16px 48px;
+    margin-left: auto;
+    background-color: #db4444;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
