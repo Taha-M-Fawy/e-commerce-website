@@ -1,0 +1,41 @@
+.signup-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    margin-bottom: 100px;
+}
+
+.signup-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.signup-form {
+    padding: 40px 30px;
+}
+
+.google-btn img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.mb-3 .form-control {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.custom-login-link {
+    color: #555;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.custom-login-link:hover {
+    color: #000;
+}

@@ -1,0 +1,37 @@
+.error_content {
+
+    gap: 40px;
+    text-align: center;
+    padding: 20px;
+    margin: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.error_message {
+
+    font-weight: 500;
+    font-size: 110px;
+    line-height: 115px;
+    letter-spacing: 3%;
+
+}
+
+.error_content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 24px;
+}
+
+.go_home_bottom {
+    width: 254px;
+    height: 56px;
+    gap: 10px;
+    border-radius: 4px;
+    padding: 16px 48px;
+    margin-left: 350px;
+    text-decoration: none;
+    background-color: #DB4444;
+    color: #ffffff;
+}
