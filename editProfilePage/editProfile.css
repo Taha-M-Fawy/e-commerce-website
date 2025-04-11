@@ -32,7 +32,6 @@
     color: black;
   }
   .container {
-    max-width: 1000px;
     margin: 50px auto;
     background: #fff;
     padding: 40px;
@@ -129,3 +128,4 @@
     background-color: #d9534f;
     color: #fff;
   }
+  
