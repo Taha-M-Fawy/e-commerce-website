@@ -1,0 +1,103 @@
+var url = "https://dummyjson.com/products";
+var products = []; // مصفوفة لتخزين المنتجات
+var categories = []; // مصفوفة لتخزين الأقسام
+
+// جلب الفئات
+async function GetCategory() {
+    try {
+        var request_category = await fetch(url + '/categories', { method: "GET" });
+        var data_category = await request_category.json();
+        categories = data_category;
+        displayCategories(categories);
+    } catch (error) {
+        console.error("ERROR", error);
+    }
+}
+
+// عرض الفئات
+function displayCategories(CategoriesToDisplay) {
+    var Div_category = document.getElementById("2");
+    var Div_Category_1 = document.getElementById("4"); // ← إلغاء التعليق هنا
+
+    Div_category.innerHTML = ''; // مسح المحتوى الحالي
+    Div_Category_1.innerHTML = ''; // مسح المحتوى الحالي للقائمة الثانية
+
+    CategoriesToDisplay.forEach((element) => {
+        Div_category.innerHTML += `
+            <div class="Card">
+             <a href="./categoryProduct.html?category=${element.slug}" class="link" target="_blank">${element.name}</a>
+            </div>
+        `;
+        Div_Category_1.innerHTML += `
+            <li class="list-group-item">
+              <a href="./categoryProduct.html?category=${element.slug}" class="link" target="_blank">${element.name}</a>
+            </li>
+        `;
+    });
+}
+
+
+GetCategory();
+// استدعاء جلب الفئات
+
+
+
+
+async function GetProduct() {
+    try {
+        var request = await fetch(url, { method: "GET" });
+        var data = await request.json();
+        products = data.products; // تخزين المنتجات في المصفوفة
+        displayProducts(products); // عرض المنتجات
+    } catch (error) {
+        console.error("ERROR", error);
+    }
+}
+
+// دالة لعرض المنتجات
+function displayProducts(productsToDisplay) {
+    var Row = document.getElementById("1");
+    Row.innerHTML = ''; // مسح المحتوى الحالي
+    productsToDisplay.forEach((element) => {
+        Row.innerHTML += `
+            <div class="coloum">
+                <div class="card" style="width: 18rem;">
+                    <img src="${element.images[0]}" class="card-img-top img-fluid" alt="${element.brand}">
+                    <div class="card-body">
+                        <h5 class="card-title">${element.brand}</h5>
+                        <p class="card-text">${element.description}</p>
+                        <a href="./ProductDetails.html?id=${element.id}" class="btn" target="_blank">Show Details</a>
+                    </div>
+                </div>
+            </div>
+            
+        `;
+    });
+}
+
+// دالة البحث
+async function searchProducts() {
+    var input = document.getElementById('searchInput').value; // الحصول على قيمة الإدخال
+    if (input.length > 0) {
+        try {
+            var request = await fetch(`https://dummyjson.com/products/search?q=${input}`);
+            var data = await request.json();
+            displayProducts(data.products); // عرض المنتجات المفلترة
+        } catch (error) {
+            console.error("ERROR", error);
+        }
+    } else {
+        // إذا كانت قيمة الإدخال فارغة، عرض جميع المنتجات
+        displayProducts(products);
+    }
+}
+
+// استدعاء لتحميل المنتجات عند تحميل الصفحة
+GetProduct();
+
+
+// Get the full name from the query string
+const urlParams = new URLSearchParams(window.location.search);
+const name = urlParams.get('name');
+// Display the thank you message
+document.getElementById("login-message").textContent = `${name}`;

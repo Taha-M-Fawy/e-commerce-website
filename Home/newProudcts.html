@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Products</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+    .head_product {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .product-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      width: calc(33% - 20px);
+      box-sizing: border-box;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    h3 {
+      margin: 0;
+      color: #343a40;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    @media (max-width: 768px) {
+      .product-card {
+        width: calc(50% - 20px);
+      }
+    }
+    @media (max-width: 480px) {
+      .product-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="head_product">
+    <div class="container">
+      <h3>All Products</h3>
+      <button id="load-products">Load Products</button>
+    </div>
+  </div>
+  <div class="new-product">
+    <div class="container product-container" id="product-container">
+      <!-- Product data will appear here -->
+    </div>
+  </div>
+
+  <script>
+    // Function to fetch and display data
+    function displayProducts() {
+      let data = localStorage.product ? JSON.parse(localStorage.product) : [];
+      let productContainer = document.getElementById("product-container");
+      productContainer.innerHTML = ""; // Clear current content
+
+      for (let i = 0; i < data.length; i++) {
+        let card = `
+          <div class="product-card">
+            <img src="${data[i].image || 'path/to/default/image.jpg'}" alt="Product Image">
+            <h4>Brand: ${data[i].title}</h4>
+            <p>${data[i].discrp}</p>
+            <p><strong>Price:</strong> $${data[i].price}</p>
+            <p><strong>Discount:</strong> $${data[i].discount}</p>
+            <p><strong>Category:</strong> ${data[i].category}</p>
+          </div>
+        `;
+        productContainer.innerHTML += card; 
+      }
+    }
+
+    // Call the function on button click
+    document.getElementById("load-products").addEventListener("click", displayProducts);
+  </script>
+        <!-- swiper js -->
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>     
+      
+        <!-- js bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+            
+</body>
+</html>
