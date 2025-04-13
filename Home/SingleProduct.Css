@@ -1,0 +1,103 @@
+/* styles.css */
+:root {
+    --primary: #ffffff;
+    --text1: #7d8184;
+  }
+  * {
+    font-family: "Inter", sans-serif;
+  }
+  .aboutus {
+    margin-top: 50px;
+  }
+  .containers {
+    margin: 0 35px;
+    padding: 0 10px;
+  }
+  .landing {
+    padding: 0 0 60px;
+  }
+  .aboutus .head {
+    color: var(--text1);
+    margin-bottom: 40px;
+  }
+  .aboutus .head a {
+    text-decoration: none;
+    color: var(--text1);
+  }
+  .aboutus .head a:hover,
+  .aboutus .head a:focus,
+  .aboutus .head .actives {
+    color: black;
+  }
+.detal {
+    padding: 60px 0;
+}
+#product-container .Row {
+   display: flex;
+   justify-content: space-between;
+  
+}
+#product-container .Row img {
+    height: 340px;
+    width: 340px;
+
+}
+.Row .Row-body {
+    margin: auto;
+    margin-left: 30px;
+    
+}
+
+.Row .Row-body .card-title {
+    color: #db4444;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+.Row .Row-body .card-text {
+    color: #333;
+    line-height: 2;
+}
+.Row .price {
+    color: #db4444;
+    font-weight: bold;
+}
+
+@media (max-width:767px) {
+    .Row {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .Row .Row-body {
+        margin: auto;
+        margin-left:0;
+        
+    }
+}
+
+.Row button {
+    margin: 10px auto auto auto;
+    background-color: #db4444;
+    color: #ffffff;
+    transition: 0.3s;
+
+}
+.Row button:hover {
+    background-color: #ffffff;
+    color: #db4444;
+    border: 1px solid #db4444;
+
+}
+.quantity-control {
+    margin-bottom: 10px;
+}
+.quantity-control input {
+width: 40px;
+border-radius: 5px;
+border: 1px solid #db4444;
+}
+.quantity-control button {
+    border: 1px solid #db4444;
+     width: 25px;
+}

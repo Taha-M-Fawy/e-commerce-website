@@ -1,0 +1,344 @@
+:root {
+  --primary: #ffffff;
+  --text1: #7d8184;
+}
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.sec_categories {
+  padding: 60px 0;
+}
+.img-top-head {
+  background: url(../image/bac.jpg);
+  position: relative;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+@media (width < 1000px) {
+   .img-top-head {
+      background-position: left;
+  }
+}
+.content-img {
+    font-size: 2rem;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    margin-left: 30%;
+}
+ .lifestyle {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+}
+.sale {
+  margin-block: 0.5rem;
+  font-weight: bold;
+}
+.sale span {
+  color: crimson;
+  margin-left: 0.8rem;
+}
+.free-shipping {
+  font-size: 1.5rem;
+}
+.img-top-head button {
+  background-color: black;
+  color: white;
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  padding: 0.6rem 1.6rem;
+}
+
+.cat-title p {
+    font-size: 14px;
+    margin-left: 23px;
+    color: #db4444;
+    position: relative;
+}
+.cat-title p::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #db4444;
+    left: -20px;
+    top: 50%;
+    transform: translatey(-50%);
+
+}
+.cat-title h2 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: bold;
+
+}
+.categories {
+  display: flex;
+  max-height: 140px;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: auto;
+  column-gap: 20px;
+}
+.categories::-webkit-scrollbar {
+  width: 40px;
+}
+.categories::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.categories::-webkit-scrollbar-thumb {
+  background-color: #db4444;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+.categories .Card {
+  margin: auto;
+  padding: 40px;
+  min-width: 250px;
+  height: 100px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.categories .Card:hover {
+  background-color: #db4444;
+}
+.categories .Card:hover a {
+  color: white;
+}
+.categories .Card a {
+  text-decoration: none;
+  color: #db4444;
+  font-weight: bold;
+}
+
+.all_product {
+  padding: 60px 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .all_product .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
+  }
+}
+.head_prduct {
+
+ margin-left: 30px;
+}
+.head_prduct .containers h3 {
+  color: #db4444;
+  padding: 7px 10px;
+  border-radius: 16px;
+  font-weight: bold;
+  position: relative;
+  
+}
+.head_prduct .containers h3::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #db4444;
+    left: -20px;
+    top: 50%;
+    transform: translatey(-50%);   
+}
+
+.card {
+  text-align: center;
+  margin: auto;
+  box-shadow: rgba(50, 50, 93, 0.1) 0px 7px 13px -2px,
+    rgba(0, 0, 0, 0.1) 0px 4px 5px -4px;
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.coloum {
+  margin-bottom: 20px;
+}
+
+.card .card-img-top {
+  width: 250px;
+  margin: auto;
+  height: 250px;
+}
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+}
+.card .card-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+.card .card-text {
+  color: #333;
+  height: 144px;
+}
+.card .btn {
+  margin: auto;
+  background: #db4444;
+  color: white;
+  transition: 0.3s;
+}
+.card .btn:hover {
+  color: #db4444;
+  background-color: #eee;
+}
+
+.categories .category-btn {
+  background-color: #007bff !important; /* استخدام !important لإعطاء الأولوية */
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.categories .category-btn:hover {
+  background-color: #0056b3 !important; /* تأكيد الأولوية هنا */
+  transform: scale(1.05);
+}
+
+
+
+.person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.person p {
+  margin: 0;
+  margin-left: 10px;
+}
+.person img {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+@media (max-width:767px) {
+ .person {
+  display: none;
+ }
+}
+
+.list-group {
+  gap: 5px !important;
+  border-right: 1px solid #dee2e6;
+  width: 20%;
+  direction: ltr !important;
+  margin-left: 40px !important;
+  margin-top:15px !important;
+}
+
+.list-group li {
+  border: none !important;
+}
+
+  .scrollable-list {
+    max-height: 400px !important;
+    overflow-y: auto !important;
+    padding-right: 5px !important;
+    scroll-behavior: smooth !important;
+    scrollbar-width: thin !important; /* دعم لـ Firefox */
+    scrollbar-color: #db4444 transparent!important;
+  }
+
+  .scrollable-list::-webkit-scrollbar-track {
+    background-color: transparent!important;
+  }
+
+  .scrollable-list::-webkit-scrollbar-thumb {
+    background-color: #db4444!important;
+    border-radius: 20px!important;
+    border: 6px solid transparent!important;
+    background-clip: content-box !important;
+  }
+
+#carouselExampleIndicators{
+  margin-top: 50px !important;
+}
+
+/* تخصيص المؤشرات (الدوائر) */
+#carouselExampleIndicators .carousel-indicators button {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: #000; /* اللون الافتراضي */
+  border: none;
+  margin: 0 5px; /* مسافة بين الدوائر */
+  transition: background-color 0.3s ease;
+}
+
+#carouselExampleIndicators .carousel-indicators .active {
+  background-color: #ff5733; /* تغيير اللون عند تحديد الدائرة */
+}
+
+/* تخصيص مظهر المؤشرات في حالة التمرير (hover) */
+#carouselExampleIndicators .carousel-indicators button:hover {
+  background-color: #ff5733; /* لون عند التمرير على الدائرة */
+}
+@media (max-width: 768px) {
+  /* For small screens, keep the list centered and make the carousel fill available space */
+  .d-flex {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; /* Center elements */
+  }
+
+  #4 {
+      width: 90%; /* List takes up 90% of the width */
+      max-width: 600px; /* Max width of the list */
+      margin-bottom: 15px;
+  }
+
+  #carouselExampleIndicators {
+      width: 90%; /* Carousel takes up 90% of the width */
+      max-width: 500px; /* Max width of the carousel */
+      height: auto;
+  }
+}
+
+@media (min-width: 769px) {
+  /* For larger screens, keep the layout in row format */
+  .d-flex {
+      flex-direction: row; /* Row layout for large screens */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+  }
+
+  .d-flex #4 {
+      width: 100%; /* List width 80% of the parent container */
+      max-width: 600px; /* Max width of the list */
+      margin-bottom: 20px;
+  }
+
+  #carouselExampleIndicators {
+      width: 500px; /* Fixed width for the carousel */
+      height: 350px; /* Fixed height */
+  }
+}
+@media (max-width: 767px) {
+  .navegation ul {
+      width: 90%;
+  }
+}    
