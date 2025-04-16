@@ -66,7 +66,7 @@ function displayProducts(productsToDisplay) {
                     <div class="card-body">
                         <h5 class="card-title">${element.brand}</h5>
                         <p class="card-text">${element.description}</p>
-                        <a href="./ProductDetails.html?id=${element.id}" class="btn" target="_blank">Show Details</a>
+                        <a href="../Home/ProductDetails.html?id=${element.id}" class="btn" target="_blank">Show Details</a>
                     </div>
                 </div>
             </div>
