@@ -42,10 +42,10 @@
                                 <a class="nav-link" aria-current="page" href="../index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../contactus_page/index.html">Contact</a>
+                                <a class="nav-link" href="./contact_ page/contact.html">Contact</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../about/about.html">About</a>
+                                <a class="nav-link" href="./about/about.html">About</a>
                             </li>
                         </ul>
                         <form class="d-flex" role="search">
@@ -57,7 +57,7 @@
                             </div>
 
                             <div class="person">
-                                <a href="../editProfilePage/EditProfilePage.html"><img src="../image/MR.png"></a>
+                                <a href="../editProfilePage/EditProfilePage.html"><img src="./image/MR.png"></a>
                                 <p id="login-message"></p>
                             </div>
                         </form>
@@ -72,8 +72,16 @@
     <div class="error_content">
         <div class="error_message">404 Not Found</div>
         <p>Your visited page not found. You may go home page.</p>
-        <a href="../Home/index.html" class="go_home_bottom">Back to home page</a>
+        <!-- <a href="../Home/index.html" class="go_home_bottom">Back to home page</a> -->
+        <button  class="go_home_bottom" onclick="goHome()">Back to home page</button>
     </div>
+
+<script>
+  function goHome() {
+    window.location.href = "index.html";
+  }
+</script>
+
     <!-- Start footer -->
     <div class="footer">
         <div class="containers">
@@ -96,9 +104,8 @@
                 <div class="box">
                     <h5>Account</h5>
                     <div class="Account-us">
-                        <a href="">My Account</a>
-                        <a href="" style="display: inline-block;">Login</a> / <a href=""
-                            style="display: inline-block;">Register</a>
+                        <a href="./editProfilePage/EditProfilePage.html">My Account</a>
+                        <a href="./login/login.htm" style="display: inline-block;">Login</a> / <a href="./create acount/create.htm"style="display: inline-block;">Register</a>
                         <a href="">Cart</a>
                         <a href="">Wishlist</a>
                         <a href="">Shop</a>
