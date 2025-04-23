@@ -378,3 +378,17 @@
   font-size: 18px;
   font-weight: bold;
 }
+.View_All{
+  margin: auto;
+  background: #db4444;
+  color: white;
+  transition: 0.3s;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  padding-inline: 25px;
+}
+.View_All:hover {
+  color: #db4444;
+  background-color: #eee;
+}
