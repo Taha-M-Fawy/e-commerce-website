@@ -35,3 +35,28 @@
     background-color: #DB4444;
     color: #ffffff;
 }
+@media (max-width: 768px) {
+    .error_content {
+        margin: 80px 20px;
+        gap: 24px;
+        padding: 10px;
+    }
+
+    .error_message {
+        font-size: 48px;
+        line-height: 52px;
+    }
+
+    .error_content p {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .go_home_bottom {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+}
