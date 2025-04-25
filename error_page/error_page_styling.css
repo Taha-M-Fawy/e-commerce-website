@@ -1,5 +1,5 @@
 .error_content {
-
+    min-width: 100%;
     gap: 40px;
     text-align: center;
     padding: 20px;
