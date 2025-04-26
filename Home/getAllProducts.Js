@@ -1,7 +1,7 @@
 var url = "https://dummyjson.com/products";
 var products = []; // مصفوفة لتخزين المنتجات
 var categories = []; // مصفوفة لتخزين الأقسام
-
+let showingAll=false;
 // جلب الفئات
 async function GetCategory() {
     try {
@@ -48,7 +48,8 @@ async function GetProduct() {
         var request = await fetch(url, { method: "GET" });
         var data = await request.json();
         products = data.products; // تخزين المنتجات في المصفوفة
-        displayProducts(products); // عرض المنتجات
+        displayProducts(products.slice(0,6)); // عرض المنتجات
+        createViewAllButton();
     } catch (error) {
         console.error("ERROR", error);
     }
@@ -58,8 +59,13 @@ async function GetProduct() {
 function displayProducts(productsToDisplay) {
     var Row = document.getElementById("1");
     Row.innerHTML = ''; // مسح المحتوى الحالي
+
+    // تجميع المحتوى أولاً
+    let content = '';
+
+    // عرض أول 6 منتجات
     productsToDisplay.forEach((element) => {
-        Row.innerHTML += `
+        content += `
             <div class="coloum">
                 <div class="card" style="width: 18rem;">
                     <img src="${element.images[0]}" class="card-img-top img-fluid" alt="${element.brand}">
@@ -73,8 +79,34 @@ function displayProducts(productsToDisplay) {
             
         `;
     });
+
+    // تحديث innerHTML مرة واحدة
+    Row.innerHTML = content;
 }
 
+
+function createViewAllButton() {
+    var viewAllContainer = document.getElementById("viewAllContainer");
+    viewAllContainer.innerHTML = `
+        <button id="viewAllBtn" class="View_All">View_All</button>
+    `;
+    document.getElementById("viewAllBtn").addEventListener("click", function () {
+        if (showingAll) {
+            displayProducts(products.slice(0, 6));
+            this.textContent = "View All";
+            showingAll = false;
+        } else {
+            displayProducts(products); 
+            this.textContent = "View Less";
+            showingAll = true;
+        }
+    });
+}
+
+window.onload = function() {
+    GetProduct();
+    createViewAllButton();
+};
 // دالة البحث
 async function searchProducts() {
     var input = document.getElementById('searchInput').value; // الحصول على قيمة الإدخال
