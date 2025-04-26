@@ -1,0 +1,131 @@
+
+body {
+    font-family: "Inter", sans-serif;
+   
+   
+}
+
+.cart {
+    padding: 40px 0;
+}
+.cart-head {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+    align-items: center;
+   
+}
+.cart-head h2 {
+color: #db4444;
+
+}
+
+/* h1 {
+    text-align: center;
+    color: #333;
+} */
+
+#cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+@media (max-width:767px) {
+    .cart-item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.cart-item-info {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.cart-item-info p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.cart-item p .price {
+    font-weight: bold;
+    color: #333;
+}
+
+.cart-item button {
+    background-color: #db4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.cart-item button:hover {
+    background-color: #db4444;
+}
+
+#clear-cart-btn {
+    background-color: #db4444;
+    color: white;
+    border: 1px solid #db4444;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+#clear-cart-btn:hover {
+    background-color: white; 
+    color: #db4444;
+
+}
+
+button {
+    background-color: #db4444;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-left:50px;
+  }
+  
+  button:hover {
+    background-color:#db4444 ;
+  }
+  
+  .Checkout-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Checkout-div #checkout-btn {
+    width: 30%;
+    margin-top: 30px;
+    border-radius: 5px;
+  }

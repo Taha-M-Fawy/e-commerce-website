@@ -1,0 +1,116 @@
+.aboutus {
+    margin: 50px 0;
+  }
+  .containers {
+    margin: 0 35px;
+    padding: 0 10px;
+  }
+  .landing {
+    padding: 0 0 60px;
+  }
+  .aboutus .head {
+    color: #c0c4c8;
+    margin-bottom: 40px;
+  }
+  .aboutus .head a {
+    text-decoration: none;
+    color:#c0c4c8 ;
+  }
+  .aboutus .head a:hover,
+  .aboutus .head a:focus,
+  .aboutus .head .actives {
+    color: black;
+  }
+  .Box {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .form, .order {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .save {
+    margin-top: 15px;
+  }
+  .order .product {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .total .row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+  .total .total {
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  .pay {
+    margin-top: 20px;
+  }
+  .code {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  .code input {
+    flex: 1;
+    padding: 8px;
+  }
+  .apply {
+    padding: 8px 12px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .confirm {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .steps {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #888;
+    font-size: 14px;
+  }
+  .steps a {
+    text-decoration: none;
+    color: #444;
+  }
+  .steps strong {
+    color: black;
+  }

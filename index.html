@@ -112,36 +112,38 @@
         <ul id="4" class="list-group scrollable-list">
         </ul>
 
-        <div id="carouselExampleIndicators" class="carousel slide" style="width: 800px; height: 350px; margin: 0 auto; object-fit: contain;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" style="width: 800px; height: 350px; margin: 0 auto;">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        </div>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+          
             <div class="carousel-inner" style="height: 100%;">
-              <div class="carousel-item active" style="position: relative; object-fit: cover;">
-                <img src="./image/artbreeder-image-2025-04-12T14_38_56.077Z.jpeg" class="d-block w-md-100 w-sm-75" alt="..." style="object-fit: cover; height: 100%; width: 100%;">
+              <div class="carousel-item active" style="position: relative;">
+                <img src="./image/artbreeder-image-2025-04-12T14_38_56.077Z.jpeg" class="d-block w-100" alt="..." style="object-fit: cover; height: 100%;">
               </div>
               <div class="carousel-item" style="position: relative;">
-                <img src="./image/artbreeder-image-2025-04-12T14_46_45.276Z.jpeg" class="d-block w-md-100 w-sm-75" alt="..." style="object-fit: cover; height: 100%; width: 100%;">
+                <img src="./image/artbreeder-image-2025-04-12T14_46_45.276Z.jpeg" class="d-block w-100" alt="..." style="object-fit: cover; height: 100%;">
               </div>
               <div class="carousel-item" style="position: relative;">
-                <img src="./image/artbreeder-image-2025-04-12T14_47_44.347Z.jpeg" class="d-block w-md-100 w-sm-75" alt="..." style="object-fit: cover; height: 100%; width: 100%;">
+                <img src="./image/artbreeder-image-2025-04-12T14_47_44.347Z.jpeg" class="d-block w-100" alt="..." style="object-fit: cover; height: 100%;">
               </div>
               <div class="carousel-item" style="position: relative;">
-                <img src="./image/artbreeder-image-2025-04-12T14_48_21.651Z.jpeg" class="d-block w-md-100 w-sm-75" alt="..." style="object-fit: cover; height: 100%; width: 100%;">
+                <img src="./image/artbreeder-image-2025-04-12T14_48_21.651Z.jpeg" class="d-block w-100" alt="..." style="object-fit: cover; height: 100%;">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" style="background-color: transparent; color: transparent;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            </button> -->
+            <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+            </button> -->
+          </div>          
       </div>
       
 
@@ -154,10 +156,13 @@
     </div>
     <div class="all_product">
         <div class="containers">
-            <div class="products" id="1">
+            <div class="products" id="1"></div>
+            <div id="viewAllContainer" class="text-center mt-4">
+                <!-- <button id="viewAllBtn" class="View_All">View ALL</button> -->
             </div>
         </div>
     </div>
+    
     <!--Categories-->
     <div class="sec_categories">
         <div class="containers">
@@ -231,7 +236,7 @@
                     <div class="Account-us">
                         <a href="./editProfilePage/EditProfilePage.html">My Account</a>
                         <a href="./login/login.htm" style="display: inline-block;">Login</a> / <a href="./create acount/create.htm"  style="display: inline-block;">Register</a>
-                        <a href="">Cart</a>
+                        <a href="./Cart/cart.html">Cart</a>
                         <a href="">Wishlist</a>
                         <a href="">Shop</a>
                     </div>
