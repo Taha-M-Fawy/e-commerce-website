@@ -45,15 +45,30 @@ GetCategory();
 
 async function GetProduct() {
     try {
-        var request = await fetch(url, { method: "GET" });
-        var data = await request.json();
-        products = data.products; // تخزين المنتجات في المصفوفة
-        displayProducts(products.slice(0,6)); // عرض المنتجات
+        const request = await fetch(url, { method: "GET" });
+        const data = await request.json();
+        products = data.products;
+
+        // تحديد عدد المنتجات حسب حجم الشاشة
+        let numberOfProducts;
+        const screenWidth = window.innerWidth;
+
+        if (screenWidth < 576) { // شاشات صغيرة جدًا (مثلاً موبايل)
+            numberOfProducts = 4;
+        } else if (screenWidth < 768) { // شاشات صغيرة (تابلت صغير مثلاً)
+            numberOfProducts = 6;
+        } else {
+            numberOfProducts = 8; // شاشات كبيرة
+        }
+
+        displayProducts(products.slice(0, numberOfProducts));
         createViewAllButton();
     } catch (error) {
         console.error("ERROR", error);
     }
 }
+window.addEventListener("resize", GetProduct);
+
 
 // دالة لعرض المنتجات
 function displayProducts(productsToDisplay) {
